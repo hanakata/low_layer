@@ -15,7 +15,6 @@ void DbgLog(const char* format, ...) {
     vsprintf_s(buffer, format, args);
     va_end(args);
     OutputDebugStringA(buffer);
-    std::cout << buffer << std::endl;
 }
 
 LONG CALLBACK GuardPageHandler(PEXCEPTION_POINTERS ExceptionInfo) {
